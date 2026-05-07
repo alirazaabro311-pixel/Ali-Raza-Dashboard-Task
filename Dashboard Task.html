@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="dstyle.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+    <aside class="sidebar" id="sidebar"> <!-- Sidebar -->
+    <div class="sidebar-brand">
+      <div class="brand-logo">
+        <i class="fa-solid fa-magnifying-glass"></i>
+      </div>
+      <div class="brand-text">
+        <span class="brand-title">FIND ANY</span>
+        <span class="brand-sub">SERVICE</span>
+      </div>
+    </div>
+
+    <div class="admin-profile">
+      <div class="avatar-wrap">
+        <div class="avatar">
+          <i class="fa-solid fa-user-tie"></i>
+        </div>
+        <span class="avatar-badge"></span>
+      </div>
+      <h3 class="admin-name">Super Admin</h3>
+      <p class="admin-role">Administrator</p>
+    </div>
+
+    <nav class="sidebar-nav">
+      <ul>
+        <li class="nav-item active">
+          <a href="#"><i class="fa-solid fa-gauge-high"></i><span>Dashboard</span></a>
+        </li>
+        <li class="nav-item">
+          <a href="#"><i class="fa-solid fa-users"></i><span>Member Listings</span></a>
+        </li>
+        <li class="nav-item">
+          <a href="#"><i class="fa-solid fa-upload"></i><span>Bulk Upload</span></a>
+        </li>
+        <li class="nav-item">
+          <a href="#"><i class="fa-solid fa-bullhorn"></i><span>Create Campaign</span></a>
+        </li>
+        <li class="nav-item">
+          <a href="#"><i class="fa-solid fa-list-check"></i><span>Campaign List</span></a>
+        </li>
+        <li class="nav-item">
+          <a href="#"><i class="fa-solid fa-envelope"></i><span>Mail List</span></a>
+        </li>
+        <li class="nav-item">
+          <a href="#"><i class="fa-solid fa-wrench"></i><span>Manage Services</span></a>
+        </li>
+        <li class="nav-item">
+          <a href="#"><i class="fa-solid fa-chart-pie"></i><span>Analytics</span></a>
+        </li>
+        <li class="nav-item">
+          <a href="#"><i class="fa-solid fa-gear"></i><span>Settings</span></a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a href="#" class="logout-btn"><i class="fa-solid fa-right-from-bracket"></i><span>Log Out</span></a>
+    </div>
+  </aside>
+
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">   <!-- Hamburger -->
+    <span></span><span></span><span></span>
+  </button>
+
+  <div class="overlay" id="overlay"></div>   <!-- Overlay -->
+
+
+  <main class="main-content">   <!-- Main Content -->
+
+   
+    <header class="topbar">  <!-- Top Bar -->
+      <div class="topbar-left">
+        <h1 class="page-title">Dashboard</h1>
+        <p class="page-sub">Welcome back, Super Admin</p>
+      </div>
+      <div class="topbar-right">
+        <div class="time-filters">
+          <button class="tf-btn active">Today</button>
+          <button class="tf-btn">Month</button>
+          <button class="tf-btn">Year</button>
+        </div>
+        <div class="topbar-icons">
+          <button class="icon-btn notif" aria-label="Notifications">
+            <i class="fa-solid fa-bell"></i>
+            <span class="badge">3</span>
+          </button>
+          <button class="icon-btn" aria-label="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+       <section class="section">  <!-- Overview Cards -->
+      <div class="section-header">
+        <h2 class="section-title">Overview</h2>
+        <a href="#" class="view-all">View All <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+      <div class="cards-grid">
+        <div class="stat-card card-blue" style="--delay:.1s">
+          <div class="card-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+          <div class="card-info">
+            <p class="card-label">Overall Sale</p>
+            <h3 class="card-value" data-target="1231">0</h3>
+            <span class="card-trend up"><i class="fa-solid fa-arrow-trend-up"></i> +12.4%</span>
+          </div>
+          <a href="#" class="card-link">View Detail</a>
+          <div class="card-bg-shape"></div>
+        </div>
+
+        <div class="stat-card card-orange" style="--delay:.2s">
+          <div class="card-icon"><i class="fa-solid fa-eye"></i></div>
+          <div class="card-info">
+            <p class="card-label">Overall Visited</p>
+            <h3 class="card-value" data-target="1446">0</h3>
+            <span class="card-trend up"><i class="fa-solid fa-arrow-trend-up"></i> +8.7%</span>
+          </div>
+          <a href="#" class="card-link">View Detail</a>
+          <div class="card-bg-shape"></div>
+        </div>
+
+        <div class="stat-card card-green" style="--delay:.3s">
+          <div class="card-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <div class="card-info">
+            <p class="card-label">Overall Growth</p>
+            <h3 class="card-value" data-target="65" data-suffix="%">0%</h3>
+            <span class="card-trend up"><i class="fa-solid fa-arrow-trend-up"></i> +5.2%</span>
+          </div>
+          <a href="#" class="card-link">View Detail</a>
+          <div class="card-bg-shape"></div>
+        </div>
+      </div>
+    </section>
+
+       <section class="section">  <!-- Secondary Section -->
+      <div class="section-header">
+        <h2 class="section-title">Secondary</h2>
+        <a href="#" class="view-all">View All <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="secondary-grid">
+
+        <div class="chart-card">  <!-- Chart Card -->
+          <div class="chart-card-header">
+            <h3>Total Sale</h3>
+            <div class="chart-legend">
+              <span class="legend-dot dot-blue"></span><span>Section 1</span>
+              <span class="legend-dot dot-red"></span><span>Section 2</span>
+            </div>
+            <div class="chart-type-selector">
+              <select id="chartType">
+                <option value="line">Line Chart</option>
+                <option value="bar">Column Chart</option>
+                <option value="area">Area Chart</option>
+              </select>
+            </div>
+          </div>
+
+         <div class="chart-wrap">  <!-- SVG Chart -->
+            <svg class="chart-svg" viewBox="0 0 600 200" preserveAspectRatio="none" id="mainChart">
+              <defs>
+                <linearGradient id="blueGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#4a90e2" stop-opacity="0.3"/>
+                  <stop offset="100%" stop-color="#4a90e2" stop-opacity="0"/>
+                </linearGradient>
+                <linearGradient id="redGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#e74c3c" stop-opacity="0.3"/>
+                  <stop offset="100%" stop-color="#e74c3c" stop-opacity="0"/>
+                </linearGradient>
+              </defs>
+              <!-- Grid lines -->
+              <line x1="0" y1="40" x2="600" y2="40" stroke="rgba(255,255,255,.07)" stroke-width="1"/>
+              <line x1="0" y1="80" x2="600" y2="80" stroke="rgba(255,255,255,.07)" stroke-width="1"/>
+              <line x1="0" y1="120" x2="600" y2="120" stroke="rgba(255,255,255,.07)" stroke-width="1"/>
+              <line x1="0" y1="160" x2="600" y2="160" stroke="rgba(255,255,255,.07)" stroke-width="1"/>
+              <!-- Area fills -->
+              <path class="area-blue" d="M0,160 C60,140 100,80 160,90 C220,100 260,60 320,50 C380,40 420,100 480,70 C540,40 570,60 600,50 L600,200 L0,200 Z" fill="url(#blueGrad)"/>
+              <path class="area-red"  d="M0,180 C60,160 100,140 160,120 C220,100 260,130 320,100 C380,70 420,60 480,40 C540,20 570,30 600,20 L600,200 L0,200 Z" fill="url(#redGrad)"/>
+              <!-- Lines -->
+              <path class="line-blue" d="M0,160 C60,140 100,80 160,90 C220,100 260,60 320,50 C380,40 420,100 480,70 C540,40 570,60 600,50" fill="none" stroke="#4a90e2" stroke-width="2.5" stroke-linecap="round"/>
+              <path class="line-red"  d="M0,180 C60,160 100,140 160,120 C220,100 260,130 320,100 C380,70 420,60 480,40 C540,20 570,30 600,20" fill="none" stroke="#e74c3c" stroke-width="2.5" stroke-linecap="round"/>
+              <!-- Peak dot -->
+              <circle class="peak-dot" cx="480" cy="40" r="5" fill="#e74c3c"/>
+              <text x="490" y="35" fill="#fff" font-size="11" font-family="Outfit">1830</text>
+            </svg>
+
+            <div class="x-labels"> <!-- X axis labels -->
+              <span>9am</span><span>12pm</span><span>15pm</span><span>18pm</span>
+              <span>21pm</span><span>24pm</span><span>27pm</span><span>30am</span>
+              <span>33am</span><span>36pm</span><span>39am</span><span>42pm</span>
+            </div>
+          </div>
+        </div>
+
+       <div class="activity-card">  <!-- User Activity -->
+          <div class="activity-header">
+            <h3>User Activity</h3>
+            <button class="icon-btn sm"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+          </div>
+          <ul class="activity-list">
+            <li class="activity-item" style="--delay:.1s">
+              <div class="act-avatar av1"><i class="fa-solid fa-user"></i></div>
+              <div class="act-info">
+                <p class="act-user">User <span class="act-tag green">new comment</span></p>
+                <p class="act-time"><i class="fa-regular fa-clock"></i> 4 minutes ago</p>
+              </div>
+              <div class="act-dot green"></div>
+            </li>
+            <li class="activity-item" style="--delay:.2s">
+              <div class="act-avatar av2"><i class="fa-solid fa-user"></i></div>
+              <div class="act-info">
+                <p class="act-user">User <span class="act-tag blue">ordered 2 items</span></p>
+                <p class="act-time"><i class="fa-regular fa-clock"></i> 20 minutes ago</p>
+              </div>
+              <div class="act-dot blue"></div>
+            </li>
+            <li class="activity-item" style="--delay:.3s">
+              <div class="act-avatar av3"><i class="fa-solid fa-user"></i></div>
+              <div class="act-info">
+                <p class="act-user">User <span class="act-tag orange">ordered 1 item</span></p>
+                <p class="act-time"><i class="fa-regular fa-clock"></i> 30 minutes ago</p>
+              </div>
+              <div class="act-dot orange"></div>
+            </li>
+            <li class="activity-item" style="--delay:.4s">
+              <div class="act-avatar av4"><i class="fa-solid fa-user"></i></div>
+              <div class="act-info">
+                <p class="act-user">User <span class="act-tag red">submitted form</span></p>
+                <p class="act-time"><i class="fa-regular fa-clock"></i> 45 minutes ago</p>
+              </div>
+              <div class="act-dot red"></div>
+            </li>
+            <li class="activity-item" style="--delay:.5s">
+              <div class="act-avatar av5"><i class="fa-solid fa-user"></i></div>
+              <div class="act-info">
+                <p class="act-user">User <span class="act-tag purple">new signup</span></p>
+                <p class="act-time"><i class="fa-regular fa-clock"></i> 1 hour ago</p>
+              </div>
+              <div class="act-dot purple"></div>
+            </li>
+          </ul>
+          <button class="see-all-btn">See All Activity</button>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section"> <!-- Extra Stats Row -->
+      <div class="section-header">
+        <h2 class="section-title">Performance</h2>
+      </div>
+      <div class="perf-grid">
+
+        <div class="perf-card" style="--delay:.1s">
+          <div class="perf-top">
+            <span class="perf-label">Revenue</span>
+            <span class="perf-icon blue"><i class="fa-solid fa-dollar-sign"></i></span>
+          </div>
+          <h3 class="perf-val">$48,295</h3>
+          <div class="progress-wrap">
+            <div class="progress-bar"><div class="progress-fill blue" style="--w:72%"></div></div>
+            <span>72%</span>
+          </div>
+        </div>
+
+        <div class="perf-card" style="--delay:.2s">
+          <div class="perf-top">
+            <span class="perf-label">New Users</span>
+            <span class="perf-icon orange"><i class="fa-solid fa-user-plus"></i></span>
+          </div>
+          <h3 class="perf-val">3,842</h3>
+          <div class="progress-wrap">
+            <div class="progress-bar"><div class="progress-fill orange" style="--w:58%"></div></div>
+            <span>58%</span>
+          </div>
+        </div>
+
+        <div class="perf-card" style="--delay:.3s">
+          <div class="perf-top">
+            <span class="perf-label">Campaigns</span>
+            <span class="perf-icon green"><i class="fa-solid fa-bullhorn"></i></span>
+          </div>
+          <h3 class="perf-val">127</h3>
+          <div class="progress-wrap">
+            <div class="progress-bar"><div class="progress-fill green" style="--w:45%"></div></div>
+            <span>45%</span>
+          </div>
+        </div>
+
+        <div class="perf-card" style="--delay:.4s">
+          <div class="perf-top">
+            <span class="perf-label">Services</span>
+            <span class="perf-icon purple"><i class="fa-solid fa-cubes"></i></span>
+          </div>
+          <h3 class="perf-val">984</h3>
+          <div class="progress-wrap">
+            <div class="progress-bar"><div class="progress-fill purple" style="--w:88%"></div></div>
+            <span>88%</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+</body>
+</html>
